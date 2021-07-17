@@ -4,8 +4,12 @@ const elementsToJiggle = Array.from(
   document.getElementsByClassName('can_jiggle')
 );
 
+let interval;
+
 const handleRange = () => {
   makeItJiggle(false);
+  clearInterval(interval);
+  interval = 0;
   switch (rangeSlider.value) {
     case '0':
       changeFonts(0);
@@ -65,15 +69,39 @@ function changeFonts(viewStyle) {
       'Slide me for different styling options. Current style: Jiggling!';
   }
 }
+function toggleUpDown() {
+  elementsToJiggle.forEach((element) => {
+    if (element.classList.contains('jiggling_up')) {
+      element.classList.remove('jiggling_up');
+      element.classList.add('jiggling_down');
+    } else {
+      element.classList.remove('jiggling_down');
+      element.classList.add('jiggling_up');
+    }
+  });
+}
 
 function makeItJiggle(jigglesOn) {
+  let counter = 0;
   if (jigglesOn) {
     elementsToJiggle.forEach((element) => {
       element.classList.add('jiggles');
+      if (counter % 2 === 0) {
+        element.classList.add('jiggling_up');
+      } else {
+        element.classList.add('jiggling_down');
+      }
+      counter++;
     });
+    interval = setInterval(() => {
+      toggleUpDown();
+    }, 100);
+    console.log(interval);
   } else {
     elementsToJiggle.forEach((element) => {
       element.classList.remove('jiggles');
+      element.classList.remove('jiggling_up');
+      element.classList.remove('jiggling_down');
     });
   }
 }

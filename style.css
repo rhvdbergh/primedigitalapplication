@@ -20,6 +20,7 @@ h4 {
 }
 
 /* Note: Default screen size is < 600px */
+/* But the styling effects only work on screens 768px and larger */
 
 a {
   text-decoration: none;
@@ -134,24 +135,11 @@ li {
   #skills_container > *,
   #experience_container > *,
   #education_container > * {
-    /* box-sizing: content-box; */
     margin-left: 15px;
-    /* border-radius: 5px; */
-    /* border: 2px red solid; */
-    /* background-color: #5fd424; */
     padding: 5px;
     margin-top: 2px;
     margin-bottom: 2px;
-    /* transition: ease-in-out; */
   }
-  /* #introduction_container > *:hover,
-  #skills_container > *:hover,
-  #experience_container > *:hover,
-  #education_container > *:hover {
-    transition-duration: 0.2s;
-    transform: scale(1.2);
-    background-color: red;
-  } */
 
   #skills_heading,
   #experience_heading,
@@ -165,9 +153,10 @@ li {
 
   .experience_details,
   .education_details {
-    width: 50%;
+    width: 70%;
     padding-left: 0;
     flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   .slightly_tacky {
@@ -183,17 +172,23 @@ li {
     box-sizing: border-box;
     border-radius: 5px;
     border: 2px rgb(0, 102, 255) solid;
-    background-color: #5fd424;
     padding: 5px;
-    transition: ease-in-out;
-    transition-duration: 0.5s;
-    /* transform: scale(1.2); */
     background-color: rgb(214, 196, 37);
+  }
+
+  .jiggling_up {
+    transition: cubic-bezier(0, 2.05, 0.66, 1.37) 0.1s;
+    transform: translate(1px, 1px);
+  }
+
+  .jiggling_down {
+    transition: cubic-bezier(0, 2.05, 0.66, 1.37) 0.1s;
+    transform: translate(-1px, -1px);
   }
 }
 
 @media screen and (min-width: 992px) {
   #container {
-    width: 60%;
+    width: 70%;
   }
 }
