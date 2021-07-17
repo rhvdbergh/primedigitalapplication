@@ -100,10 +100,6 @@ li {
   margin-bottom: 0;
 }
 
-.tacky {
-  font-family: 'Comic Neue', cursive;
-}
-
 /* Media Queries */
 
 @media screen and (min-width: 600px) {
@@ -172,6 +168,27 @@ li {
     width: 50%;
     padding-left: 0;
     flex-direction: row;
+  }
+
+  .slightly_tacky {
+    font-family: 'Comic Neue', cursive;
+  }
+
+  .tacky {
+    font-family: 'Cedarville Cursive', cursive;
+    color: blue;
+  }
+
+  .jiggles {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px rgb(0, 102, 255) solid;
+    background-color: #5fd424;
+    padding: 5px;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+    /* transform: scale(1.2); */
+    background-color: rgb(214, 196, 37);
   }
 }
 

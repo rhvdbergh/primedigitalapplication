@@ -8,149 +8,153 @@
   <title>Resume: Ronald van der Bergh</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Noto+Sans+KR&family=Open+Sans&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comic+Neue&family=Noto+Sans+KR&family=Open+Sans&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="views.js"></script>
 </head>
 
 <body>
   <div id="container">
     <div id="view_message_container">View this website on a larger screen for some extra styling options.</div>
     <div id="settings_container">
-      <input type="range" name="viewing_options" id="viewing_options" min="0" max="2" value="0">
-      <label for="viewing_options" id="viewing_options_label">Slide me for different styling options. Current style: Regular.</label>
+      <input type="range" name="viewing_options" id="viewing_options" min="0" max="3" value="0" list="ticks">
+      <datalist id="ticks">
+        <option value="1"></option>
+        <option value="2"></option>
+      </datalist>
+      <label for="viewing_options" id="viewing_options_label" class="changeable_font">Slide me for different styling options. Current style: Regular.</label>
     </div>
     <div id="heading">
-      <h1 id="name">Ronald van der Bergh</h1>
+      <h1 id="name" class="changeable_font">Ronald van der Bergh</h1>
     </div>
     <div id="biographical_details_container">
       <div id="address">
-        <p>4407 North Rd, Circle Pines, MN 55014</p>
+        <p class="changeable_font">4407 North Rd, Circle Pines, MN 55014</p>
       </div>
       <div id="phone_number">
-        <p>845.422.2945</p>
+        <p class="changeable_font">845.422.2945</p>
       </div>
       <div id="webpages">
-        <a href="https://vanderbergh.com" id="personal_webpage">https://vanderbergh.com</a>
+        <a href="https://vanderbergh.com" id="personal_webpage" class="changeable_font">https://vanderbergh.com</a>
       </div>
     </div>
-    <div id="introduction_container">
-      <p>An analytical and critical thinker, I am an experienced academic editor and higher education lecturer with an
+    <div id="introduction_container" class="can_jiggle">
+      <p class="changeable_font">An analytical and critical thinker, I am an experienced academic editor and higher education lecturer with an
         interest
         in information technology and coding. I am sold on continuously improving, especially if I gain skills that
         serve and
         provide solutions to society.</p>
-    </div>
-    <div id="skills_container">
-      <h2 id="skills_heading">Skills</h2>
-      <ul id="skills_ul">
-        <li>JavaScript, HTML, CSS, React, Node, Express, SQL, MongoDB, Python</li>
-        <li>Gained critical and analytical skills through research in a detail-oriented field (textual criticism)</li>
-        <li>Formed excellent communication skills by living in the US, South Africa, and Germany in diverse communities
-        </li>
-      </ul>
-    </div>
-    <div id="experience_container">
-      <h2 id="experience_heading">Experience</h2>
-      <div class="experience_subsection">
-        <h3 class="subheading">Adjunct Lecturer</h3>
-        <div class="experience_details">
-          <p class="experience_location">North Central University, Minneapolis, MN</p>
-          <p class="experience_date">Aug 2019 – present</p>
-        </div>
       </div>
-      <div class="experience_subsection">
-        <h3 class="subheading">Academic Editor</h3>
-        <div class="experience_details">
-          <p class="experience_location">Faithlife Corporation, Bellingham, WA</p>
-          <p class="experience_date">Jul 2018 – present</p>
-        </div>
-        <ul class="experience_highlights">
-          <li>Reduced time spent formatting while editing by creating macros (even though unfamiliar with Visual Basic
-            at the
-            time)</li>
-          <li>Proofread and copy-edited various forms of media for the original content / publisher division</li>
-          <li>Wrote video scripts to introduce non-specialist users to the technical capabilities of Logos Bible
-            Software</li>
-        </ul>
-      </div>
-      <div class="experience_subsection">
-        <h3 class="subheading">Pastor</h3>
-        <div class="experience_details">
-          <p class="experience_location">Clarkstown Reformed Church, West Nyack, NY</p>
-          <p class="experience_date">Oct 2016 – Jun 2018</p>
-        </div>
-        <ul class="experience_highlights">
-          <li>Organized, refined, and managed church hall rental system to streamline rental application process</li>
-          <li>Managed church hall rentals, communication, and church board commitments</li>
-          <li>Improved communication, collaboration, and documentation of church board meetings by introducing digital
-            tools
+      <div id="skills_container">
+        <h2 id="skills_heading" class="changeable_font can_jiggle">Skills</h2>
+        <ul id="skills_ul" class="changeable_font can_jiggle">
+          <li>JavaScript, HTML, CSS, React, Node, Express, SQL, MongoDB, Python</li>
+          <li>Gained critical and analytical skills through research in a detail-oriented field (textual criticism)</li>
+          <li>Formed excellent communication skills by living in the US, South Africa, and Germany in diverse communities
           </li>
         </ul>
       </div>
-      <div class="experience_subsection">
-        <h3 class="subheading">Lecturer in Biblical Greek</h3>
-        <div class="experience_details">
-          <p class="experience_location">University of Pretoria, Pretoria, South Africa</p>
-          <p class="experience_date">Jan 2010 – Sep 2016</p>
+      <div id="experience_container">
+        <h2 id="experience_heading" class="changeable_font can_jiggle">Experience</h2>
+        <div class="experience_subsection can_jiggle">
+          <h3 class="subheading changeable_font">Adjunct Lecturer</h3>
+          <div class="experience_details changeable_font">
+            <p class="experience_location">North Central University, Minneapolis, MN</p>
+            <p class="experience_date">Aug 2019 – present</p>
+          </div>
         </div>
-        <ul class="experience_highlights">
-          <li>Collaborated on international projects, e.g., contributing to a quotation database project based in
-            Germany</li>
-          <li>Presented research papers at several conferences globally</li>
-          <li>Coordinated a program unit as chair for the international meeting of the Society of Biblical Studies</li>
-        </ul>
-      </div>
-    </div>
-
-
-    <div id="education_container">
-      <h2 id="education_heading">Education</h2>
-      <div class="education_subsection">
-        <h3 class="subheading">Full Stack JavaScript Techdegree</h3>
-        <div class="education_details">
-          <p class="education_location">Treehouse</p>
-          <p class="education_date">2018</p>
-        </div>
-      </div>
-      <div class="education_subsection">
-        <h3 class="subheading">Doctor of Divinity (New Testament Studies)</h3>
-        <div class="education_details">
-          <p class="education_location">University of Pretoria, South Africa</p>
-          <p class="education_date">2014</p>
-        </div>
-      </div>
-      <div class="education_subsection">
-        <h3 class="subheading">Master of Theology (New Testament Studies)</h3>
-        <div class="education_details">
-          <p class="education_location">University of Pretoria, South Africa</p>
-          <p class="education_date">2010</p>
-        </div>
-      </div>
-      <div class="education_subsection">
-        <h3 class="subheading">Master of Arts (Ancient Languages and Culture Studies)</h3>
-        <div class="education_details">
-          <p class="education_location">University of Pretoria, South Africa</p>
-          <p class="education_date">2008</p>
-        </div>
-      </div>
-      <div class="education_subsection">
-        <h3 class="subheading">Master of Divinity</h3>
-        <div class="education_details">
-          <p class="education_location">University of Pretoria, South Africa</p>
-          <p class="education_date">2007</p>
-        </div>
-      </div>
-      <div class="education_subsection">
-        <h3 class="subheading">Bachelor of Theology</h3>
-        <div class="education_details">
-          <p class="education_location">University of Pretoria, South Africa</p>
-          <p class="education_date">2005</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-
-</html>
+        <div class="experience_subsection can_jiggle">
+          <h3 class="subheading changeable_font">Academic Editor</h3>
+          <div class="experience_details changeable_font">
+            <p class="experience_location">Faithlife Corporation, Bellingham, WA</p>
+            <p class="experience_date">Jul 2018 – present</p>
+          </div>
+          <ul class="experience_highlights changeable_font">
+            <li>Reduced time spent formatting while editing by creating macros (even though unfamiliar with Visual Basic
+              at the
+              time)</li>
+              <li>Proofread and copy-edited various forms of media for the original content / publisher division</li>
+              <li>Wrote video scripts to introduce non-specialist users to the technical capabilities of Logos Bible
+                Software</li>
+              </ul>
+            </div>
+            <div class="experience_subsection can_jiggle">
+              <h3 class="subheading changeable_font">Pastor</h3>
+              <div class="experience_details changeable_font">
+                <p class="experience_location">Clarkstown Reformed Church, West Nyack, NY</p>
+                <p class="experience_date">Oct 2016 – Jun 2018</p>
+              </div>
+              <ul class="experience_highlights changeable_font">
+                <li>Organized, refined, and managed church hall rental system to streamline rental application process</li>
+                <li>Managed church hall rentals, communication, and church board commitments</li>
+                <li>Improved communication, collaboration, and documentation of church board meetings by introducing digital
+                  tools
+                </li>
+              </ul>
+            </div>
+            <div class="experience_subsection can_jiggle">
+              <h3 class="subheading changeable_font">Lecturer in Biblical Greek</h3>
+              <div class="experience_details changeable_font">
+                <p class="experience_location">University of Pretoria, Pretoria, South Africa</p>
+                <p class="experience_date">Jan 2010 – Sep 2016</p>
+              </div>
+              <ul class="experience_highlights changeable_font">
+                <li>Collaborated on international projects, e.g., contributing to a quotation database project based in
+                  Germany</li>
+                  <li>Presented research papers at several conferences globally</li>
+                  <li>Coordinated a program unit as chair for the international meeting of the Society of Biblical Studies</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div id="education_container">
+              <h2 id="education_heading" class="changeable_font can_jiggle">Education</h2>
+              <div class="education_subsection can_jiggle">
+                <h3 class="subheading changeable_font">Full Stack JavaScript Techdegree</h3>
+                <div class="education_details changeable_font">
+                  <p class="education_location">Treehouse</p>
+                  <p class="education_date">2018</p>
+                </div>
+              </div>
+              <div class="education_subsection can_jiggle">
+                <h3 class="subheading changeable_font">Doctor of Divinity (New Testament Studies)</h3>
+                <div class="education_details changeable_font">
+                  <p class="education_location">University of Pretoria, South Africa</p>
+                  <p class="education_date">2014</p>
+                </div>
+              </div>
+              <div class="education_subsection can_jiggle">
+                <h3 class="subheading changeable_font">Master of Theology (New Testament Studies)</h3>
+                <div class="education_details changeable_font">
+                  <p class="education_location">University of Pretoria, South Africa</p>
+                  <p class="education_date">2010</p>
+                </div>
+              </div>
+              <div class="education_subsection can_jiggle">
+                <h3 class="subheading changeable_font">Master of Arts (Ancient Languages and Culture Studies)</h3>
+                <div class="education_details changeable_font">
+                  <p class="education_location">University of Pretoria, South Africa</p>
+                  <p class="education_date">2008</p>
+                </div>
+              </div>
+              <div class="education_subsection can_jiggle">
+                <h3 class="subheading changeable_font">Master of Divinity</h3>
+                <div class="education_details changeable_font">
+                  <p class="education_location">University of Pretoria, South Africa</p>
+                  <p class="education_date">2007</p>
+                </div>
+              </div>
+              <div class="education_subsection can_jiggle">
+                <h3 class="subheading changeable_font">Bachelor of Theology</h3>
+                <div class="education_details changeable_font">
+                  <p class="education_location">University of Pretoria, South Africa</p>
+                  <p class="education_date">2005</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script src="views.js"></script>
+        </body>
+        
+        </html>
