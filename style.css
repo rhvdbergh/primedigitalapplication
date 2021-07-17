@@ -1,6 +1,7 @@
 :root {
   --light-text-color: black;
   --light-background-color: beige;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body,
@@ -9,6 +10,13 @@ html {
   width: 100%;
   padding: 0;
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* Note: Default screen size is < 600px */
@@ -34,6 +42,10 @@ li {
   margin: auto;
   background-color: var(--light-background-color);
   padding: 20px;
+}
+
+#settings_container {
+  display: none;
 }
 
 #biographical_details_container {
@@ -88,6 +100,10 @@ li {
   margin-bottom: 0;
 }
 
+.tacky {
+  font-family: 'Comic Neue', cursive;
+}
+
 /* Media Queries */
 
 @media screen and (min-width: 600px) {
@@ -110,19 +126,36 @@ li {
     padding-top: 60px;
   }
 
+  #view_message_container {
+    display: none;
+  }
+
+  #settings_container {
+    display: block;
+  }
+
   #introduction_container > *,
   #skills_container > *,
   #experience_container > *,
   #education_container > * {
-    box-sizing: content-box;
+    /* box-sizing: content-box; */
     margin-left: 15px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     /* border: 2px red solid; */
-    background-color: #5fd424;
-    padding: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    /* background-color: #5fd424; */
+    padding: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    /* transition: ease-in-out; */
   }
+  /* #introduction_container > *:hover,
+  #skills_container > *:hover,
+  #experience_container > *:hover,
+  #education_container > *:hover {
+    transition-duration: 0.2s;
+    transform: scale(1.2);
+    background-color: red;
+  } */
 
   #skills_heading,
   #experience_heading,
@@ -131,7 +164,7 @@ li {
   }
 
   #skills_ul {
-    padding-left: 50px;
+    padding-left: 40px;
   }
 
   .experience_details,
