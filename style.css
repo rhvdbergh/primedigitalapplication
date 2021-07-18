@@ -70,6 +70,28 @@ li {
   padding: 3px;
 }
 
+#phone_number {
+  margin-bottom: 30px;
+}
+
+#webpages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+.webpage {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-top: 1px solid var(--light-text-color);
+  border-bottom: 1px solid var(--light-text-color);
+}
+
 .subheading {
   margin-top: 0;
   margin-bottom: 0;
@@ -115,6 +137,27 @@ li {
     padding-left: 50px;
     padding-right: 100px;
   }
+
+  #webpages {
+    flex-direction: row;
+  }
+
+  .webpage {
+    border: none;
+    border-left: 1px var(--light-text-color) solid;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+  .webpage:last-child {
+    margin-right: 10px;
+    border-right: 1px var(--light-text-color) solid;
+    padding-right: 10px;
+  }
+
+  .webpage:hover {
+    color: rgb(224, 204, 204);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -141,6 +184,7 @@ li {
     margin-bottom: 2px;
   }
 
+  #introduction_heading,
   #skills_heading,
   #experience_heading,
   #education_heading {
